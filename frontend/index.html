@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noon Analytics - Start</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-2xl text-center p-8">
+        <header class="mb-12">
+            <h1 class="text-5xl font-bold text-gray-100 mb-2">Analyze Noon.com Products Instantly</h1>
+            <p class="text-lg text-gray-400">Paste a Noon.com category or search URL to begin.</p>
+        </header>
+        <main class="flex flex-col sm:flex-row items-center gap-4">
+            <div class="relative flex-grow w-full">
+                <input 
+                    type="url" 
+                    id="noon-url-input"
+                    placeholder="Paste a Noon.com category or search URL here"
+                    class="w-full h-14 px-6 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none transition duration-300 text-gray-200 placeholder-gray-500"
+                >
+            </div>
+            <button 
+                id="start-analysis-btn"
+                class="w-full sm:w-auto h-14 px-8 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-500 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                onclick="startAnalysis()">
+                Start Analysis
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </button>
+        </main>
+        <footer class="mt-24 text-gray-600 text-sm">
+            <p>This is a demonstration. Clicking "Start Analysis" will load a dashboard with pre-populated sample data.</p>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+        function startAnalysis() {
+            const button = document.getElementById('start-analysis-btn');
+            const input = document.getElementById('noon-url-input');
+            button.disabled = true;
+            button.innerHTML = `
+                <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Processing...
+            `;
+            setTimeout(() => {
+                window.location.href = 'dashboard.html';
+            }, 1500);
+        }
+    </script>
+</body>
+</html> 

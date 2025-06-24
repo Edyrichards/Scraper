@@ -1,0 +1,12 @@
+body {
+    background: #18181b;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#dashboard-root {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+} 

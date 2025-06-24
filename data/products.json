@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "export_time": "2025-06-23T12:00:00Z",
+    "total_products": 2
+  },
+  "products": [
+    {
+      "product_id": "N40893810A",
+      "name": "Classic Crew Neck T-Shirt",
+      "product_link": "https://www.noon.com/uae-en/classic-crew-neck-t-shirt/N40893810A/p/",
+      "price": 79.00,
+      "currency": "AED",
+      "discount_percentage": 10,
+      "delivery_type": "Express",
+      "image_url": "https://cdn.noon.com/images/classic-crew-neck-t-shirt.jpg",
+      "category": "Clothing",
+      "colour": "White",
+      "material": "Cotton",
+      "pattern": "Solid",
+      "occasion": "Casual",
+      "garment_type": "T-Shirt",
+      "scraped_at": "2025-06-23T11:59:00Z"
+    },
+    {
+      "product_id": "N40893811B",
+      "name": "Slim Fit Jeans",
+      "product_link": "https://www.noon.com/uae-en/slim-fit-jeans/N40893811B/p/",
+      "price": 129.00,
+      "currency": "AED",
+      "discount_percentage": 15,
+      "delivery_type": "Express",
+      "image_url": "https://cdn.noon.com/images/slim-fit-jeans.jpg",
+      "category": "Clothing",
+      "colour": "Blue",
+      "material": "Denim",
+      "pattern": "Solid",
+      "occasion": "Casual",
+      "garment_type": "Jeans",
+      "scraped_at": "2025-06-23T11:58:00Z"
+    }
+  ]
+} 
